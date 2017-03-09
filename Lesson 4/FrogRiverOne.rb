@@ -3,11 +3,11 @@
 
 def solution(x, a)
   # write your code in Ruby 2.2
-  path = Array(1..x)
+  path = {}
 
   a.each_with_index do |element, i|
-    path.delete(element)
-    return i if path.empty?
+    path[element] = true
+    return i if path.size == x
   end
   -1
 end
