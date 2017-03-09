@@ -3,12 +3,8 @@
 
 def solution(a)
   # write your code in Ruby 2.2
-  size = a.size
-  permutation = Array(1..size)
-  #puts permutation
-  if permutation - a  == []
-    return 1
-  else
-    return 0
-  end
+  permutation = Array(1..a.size)
+  # puts permutation
+  return 1 if permutation - a == []
+  0
 end
